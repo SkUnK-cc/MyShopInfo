@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="horizontal"
+    android:padding="15dp"
+    android:background="@drawable/bg_circle_corner_active_item"
+    android:layout_marginTop="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/active_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:src="@mipmap/rectangle1"
+        android:layout_marginRight="13dp"/>
+
+    <TextView
+        android:id="@+id/active_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="俏九州6人聚餐活动"
+        android:layout_toRightOf="@id/active_image"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"/>
+    <ImageView
+        android:id="@+id/active_iv_time"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_toRightOf="@id/active_image"
+        android:layout_below="@id/active_name"
+        android:src="@drawable/ic_time" />
+    <TextView
+        android:id="@+id/active_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="俏九州6人聚餐活动"
+        android:layout_toRightOf="@id/active_iv_time"
+        android:layout_below="@id/active_name"
+        android:textSize="16sp"
+        android:textColor="#aaFFFFFF"/>
+    <ImageView
+        android:id="@+id/active_iv_location"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_toRightOf="@id/active_image"
+        android:layout_below="@id/active_time"
+        android:src="@drawable/ic_location" />
+    <TextView
+        android:id="@+id/active_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="东湖街道太宁路8号喜荟城购物中心二层228号店铺"
+        android:layout_toRightOf="@id/active_iv_location"
+        android:layout_below="@id/active_time"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#aaFFFFFF"/>
+    <com.example.myapplication.custom.PileView
+        android:id="@+id/pileview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/active_image"
+        app:pilelayout_pileWidth="10dp" />
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:text="报名"
+        android:background="#FF6B7D"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

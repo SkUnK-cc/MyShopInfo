@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PileLayout">
+        <attr name="pilelayout_verticalSpace" format="dimension"/>
+        <attr name="pilelayout_pileWidth" format="dimension"/>
+    </declare-styleable>
+</resources>

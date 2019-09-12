@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shopinfo.ShopInfoActivity"
+    android:background="#100D1F">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/headerbg"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/shopinfoToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:alpha="1"
+            app:navigationIcon="@drawable/ic_back"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_circle_corner"
+            android:padding="15dp">
+            <RelativeLayout
+                android:id="@+id/inrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/shopName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="俏九州湘西菜"
+                    android:textColor="@android:color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="粉丝 273     被赞 5271     人气 61782"
+                    android:textSize="11sp"
+                    android:textColor="#aaFFFFFF"
+                    android:layout_below="@+id/shopName"
+                    android:layout_marginTop="3dp"/>
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:text="进入群聊"
+                    android:textSize="12sp"
+                    android:textColor="#222222"
+                    android:background="@drawable/bg_circle_corner_yellow"
+                    />
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:src="@drawable/headerbg"
+                android:layout_below="@id/inrv"
+                android:layout_margin="10dp"/>
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:src="@drawable/headerbg"
+                android:layout_below="@id/inrv"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"/>
+            <LinearLayout
+                android:id="@+id/ll_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image1"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="11dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_location"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="东湖街道太宁路8号喜荟城购物中心二层228号商铺"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginLeft="1dp"/>
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_next"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_location"
+                android:text="高新园美食餐饮联盟频道\n商务合作加微信：Y78787232\n本频道招牌菜有湘西甜米酒、苗家酸汤鱼、湘西…"
+                android:textColor="#FFFFFF"/>
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="#aaFFFFFF"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabIndicatorColor="#FFDF0B"
+            app:tabIndicatorFullWidth="false">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
