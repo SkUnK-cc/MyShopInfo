@@ -2,6 +2,8 @@ package com.example.myapplication.shopinfo.fragment.active
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,10 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.postDelayed
 import com.example.myapplication.R
 
 import com.example.myapplication.shopinfo.fragment.active.dummy.DummyContent
 import com.example.myapplication.shopinfo.fragment.active.dummy.DummyContent.DummyItem
+import com.example.myapplication.utils.LogUtils
+import kotlinx.android.synthetic.main.shop_fragment_active_list.*
 
 /**
  * A fragment representing a list of Items.
@@ -35,11 +40,9 @@ class FragmentActive : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.shop_fragment_active_list, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val viewg = inflater.inflate(R.layout.shop_fragment_active_list, container, false) as ViewGroup
+        var view = viewg.findViewById<RecyclerView>(R.id.list)
 
         // Set the adapter
         if (view is RecyclerView) {
@@ -62,6 +65,14 @@ class FragmentActive : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    }
+
+    override fun onResume() {
+        super.onResume()
+        var handler = Handler(Looper.getMainLooper())
+        handler.postDelayed(3000){
+            LogUtils.e("list.height: ${list.height}")
+        }
     }
 
     override fun onAttach(context: Context) {

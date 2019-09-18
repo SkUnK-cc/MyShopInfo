@@ -25,7 +25,7 @@ object DummyContent {
         HeaderItem("头部")
     val FOOTER : FooterItem =
         FooterItem("添加")
-    private const val COUNT = 5
+    private const val COUNT = 10
 
 
     init {

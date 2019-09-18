@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MyApplication</string>
+    <string name="my_appbar_alpha_behavior">com.example.myapplication.shopinfo.behavior.MyAppBarAlphaBehavior</string>
+    <string name="my_appbar_changed_behavior">com.example.myapplication.shopinfo.behavior.MyAppBarViewChangedBehavior</string>
+
+    <string name="shop_name">俏九州湘西菜</string>
+    <string name="frequency_num">频道号：676769</string>
+    <string-array name="tags">
+        <item>美食</item>
+        <item>湘西菜</item>
+        <item>高新园</item>
+    </string-array>
 </resources>

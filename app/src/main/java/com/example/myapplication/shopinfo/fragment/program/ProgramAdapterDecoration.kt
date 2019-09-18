@@ -42,7 +42,7 @@ class ProgramAdapterDecoration: RecyclerView.ItemDecoration() {
             var dividerRight = parent.width - parent.paddingRight
 
             var circleX = dividerLeft + mOffsetLeft*3
-            var circleY = dividerTop + DimensionUtil.dp2dx(view, (23/2).toFloat())
+            var circleY = dividerTop + DimensionUtil.dp2px(view.context, (23/2).toFloat())
 
             var lineTopX = circleX
             var lineTopY = dividerTop

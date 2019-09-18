@@ -38,8 +38,8 @@ class FragmentProgram : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.shop_fragment_program_list, container, false)
-
+        val viewg = inflater.inflate(R.layout.shop_fragment_program_list, container, false) as ViewGroup
+        var view = viewg.findViewById<RecyclerView>(R.id.list)
         // Set the adapter
         if (view is RecyclerView) {
             with(view) {

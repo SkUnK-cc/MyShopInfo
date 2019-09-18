@@ -10,6 +10,7 @@ import com.example.myapplication.custom.PileView
 
 import com.example.myapplication.shopinfo.fragment.active.FragmentActive.OnListFragmentInteractionListener
 import com.example.myapplication.shopinfo.fragment.active.dummy.DummyContent.DummyItem
+import com.example.myapplication.utils.LogUtils
 
 import kotlinx.android.synthetic.main.fragment_item.view.*
 

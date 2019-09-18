@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.Dimension;
-
 import com.example.myapplication.R;
 import com.example.myapplication.utils.DimensionUtil;
 
@@ -39,8 +37,8 @@ public class PileView extends ViewGroup {
 
     private void initAttr(Context context, AttributeSet attrs) {
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.PileLayout);
-        verticalSpace = ta.getDimension(R.styleable.PileLayout_pilelayout_verticalSpace, DimensionUtil.INSTANCE.dp2dx(this,4));
-        pileWidth = ta.getDimension(R.styleable.PileLayout_pilelayout_pileWidth,DimensionUtil.INSTANCE.dp2dx(this,10));
+        verticalSpace = ta.getDimension(R.styleable.PileLayout_pilelayout_verticalSpace, DimensionUtil.INSTANCE.dp2px(getContext(),4));
+        pileWidth = ta.getDimension(R.styleable.PileLayout_pilelayout_pileWidth,DimensionUtil.INSTANCE.dp2px(getContext(),10));
         ta.recycle();
     }
 
